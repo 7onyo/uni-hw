@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'form/form-style.css'%}">
+    <script src = "{% static 'form/form.js' %}" defer></script>
+
+    <style>
+        @font-face 
+        {
+            font-family: myFont;
+            src: url("{% static 'fonts/poppins/Poppins-Regular.ttf' %}");
+        }
+
+        * 
+        {
+            font-family: myFont;
+        }
+    </style>
+
+    <title>Form</title>
+
+</head>
+<body>
+<div class = "page">
+    <div class = "linkBar">
+
+    
+        <div class = "link-container">
+            <a href = "{% url 'index' %}" class = "pageLink">Home</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'about' %}" class = "pageLink">About</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'form' %}" class = "pageLink">Form</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'gallery' %}" class = "pageLink">Gallery</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'chatbot' %}" class = "pageLink">ChatBot</a>
+        </div>
+
+    </div>
+
+    <div class = "midSection">
+        <div class = "form">
+            <div style="display: flex; justify-content: center; align-items: center;">FORMULAR</div>
+
+            <div class = "fillSection">
+                <div class = "fillBlock">
+                    First Name:
+                    <input type="text" id = "firstName">
+                </div>
+    
+                <div class = "fillBlock">
+                    Last Name:
+                    <input type="text" id = "lastName">
+                </div>
+    
+                <div class = "fillBlock">
+                    Gender:
+                    <input type="text" id = "gender">
+                </div>
+    
+                <div class = "fillBlock">
+                    Email:
+                    <input type="text" id = "email">
+                </div>
+    
+                <div class = "fillBlock">
+                    Country:
+                    <input type="text" id = "country">
+                </div>
+    
+                <div class = "fillBlock">
+                    Profile Pic:
+                    <input type="file" id = "picture">
+                </div>
+    
+                <div class = "fillBlock">
+                    CV:
+                    <input type="file" id = "cv">
+                </div>
+
+                <div id="createUserButton">Create User</div>
+
+            </div>
+            
+        </div>
+    </div>
+
+    <div class = "bottomBar">
+        <p style="color: rgb(219, 219, 219);">&copy; 2024 Victor-Daniel Luca - Blog</p>
+        <div class = "link-container"><a class = "pageLink" href = "https://linktr.ee/daniluca091">MyLinks</a></div>
+    </div>
+</div>
+</body>
+</html>

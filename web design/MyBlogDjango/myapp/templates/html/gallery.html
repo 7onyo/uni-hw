@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'gallery/gallery-style.css'%}">
+    <script src = "{% static 'gallery/gallery.js' %}" defer></script>
+
+    <style>
+        @font-face 
+        {
+            font-family: myFont;
+            src: url("{% static 'fonts/poppins/Poppins-Regular.ttf' %}");
+        }
+
+        * 
+        {
+            font-family: myFont;
+        }
+    </style>
+
+    <title>Gallery</title>
+</head>
+
+<body>
+
+<div class = "page">
+
+    
+
+    <div class = "titleBar">
+        <h1 style="color: rgb(219, 219, 219);"> Welcome to Victor-Daniel Luca - Gallery </h1>
+    </div>
+
+    <div class = "linkBar">
+
+    
+        <div class = "link-container">
+            <a href = "{% url 'index' %}" class = "pageLink">Home</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'about' %}" class = "pageLink">About</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'form' %}" class = "pageLink">Form</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'gallery' %}" class = "pageLink">Gallery</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'chatbot' %}" class = "pageLink">ChatBot</a>
+        </div>
+
+    </div>
+
+
+    <div class = "slider">
+        <div class = "slides">
+            <img src="{% static 'images/moki.jpg' %}" class="image">
+            <img src="{% static 'images/cinema.jpg' %}" class="image">
+            <img src="{% static 'images/beer.jpg' %}" class="image">
+        </div>
+
+        <div class = "sliderButtons">
+            <div class="myButton" onclick="prevSlide()">Prev</div>
+            <div class="myButton" onclick="nextSlide()">Next</div>
+        </div>
+    </div>
+
+    
+
+    <div class = "bottomBar">
+        <p style="color: rgb(219, 219, 219);">&copy; 2024 Victor-Daniel Luca - Blog</p>
+        <div class = "link-container"><a class = "pageLink" href = "https://linktr.ee/daniluca091">MyLinks</a></div>
+    </div>
+
+</div>
+
+</body>
+</html>

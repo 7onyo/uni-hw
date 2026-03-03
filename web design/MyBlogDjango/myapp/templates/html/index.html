@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index/index-style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'index/index_BackToTop.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'index/index_SearchPosts.css'%}">
+
+    
+
+    <script src = "{% static 'index/index_SearchPosts.js' %}" defer></script>
+    <script src = "{% static 'index/index_BackToTop.js' %}" defer></script>
+
+    
+    <style>
+        @font-face 
+        {
+            font-family: myFont;
+            src: url("{% static 'fonts/poppins/Poppins-Regular.ttf' %}");
+        }
+
+        * 
+        {
+            font-family: myFont;
+        }
+    </style>
+   
+    <title>Victor-Daniel Luca - Blog</title>
+</head>
+<body>
+
+<div class = "page">
+
+    
+    <div class = "top">
+
+        <div class = "titleBar">
+            <h1 style="color: rgb(219, 219, 219);"> Welcome to Victor-Daniel Luca - Blog </h1>
+        </div>
+
+    
+        <div id="searchContainer">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button id="searchButton" onclick="searchPosts()">Search</button>
+        </div>
+
+    </div>
+
+    <div class = "linkBar">
+
+    
+        <div class = "link-container">
+            <a href = "{% url 'index' %}" class = "pageLink">Home</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'about' %}" class = "pageLink">About</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'form' %}" class = "pageLink">Form</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'gallery' %}" class = "pageLink">Gallery</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'chatbot' %}" class = "pageLink">ChatBot</a>
+        </div>
+        
+    </div>
+
+
+
+    <div class = "newSection">
+        {% block content %}
+        {% for post in posts %}
+        <div class = "innerNewSection">
+            <div class = "blogPost" style="width: 75%;">
+
+                <div class = "blogPostTitle">
+                    {{post.title}}
+                </div>
+        
+                <div class = "image">
+                    <img src="{{post.image.url}}" style="width: 75%; border-radius: 25px">
+                </div>
+                
+                <div class = "imageDescription">
+                    {{post.paragraph}}    
+                </div>
+
+        
+                <div class = "bottomDate">
+                    By Victor-Daniel Luca, Posted on {{post.post_date}}
+                </div>
+        
+                <a href="{% url 'post_detail' post.id %}" class = "pageLink" style="margin: 10px 10px 10px 10px;">{{ post.title }}</a>
+            </div>
+        </div>
+        {% endfor %}
+        {% endblock %}
+
+    </div>
+
+
+
+
+
+    <div class = "reviewSection">
+        <h2 style="color: rgb(219, 219, 219)">Reviews</h2>
+        <ul>
+            {% for review in reviews %}
+            <li>
+                <p><strong>{{ review.email }}</strong> ({{ review.date }})</p>
+                <p>Rating: {{ review.rating }}</p>
+                <p>{{ review.comment }}</p>
+                <a href="{% url 'update_review' review.id %}" class = "pageLink">Update</a>
+                <a href="{% url 'delete_review' review.id %}" class = "pageLink">Delete</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'submit_review' %}" class = "pageLink">Leave a Review</a>
+    </div>
+
+
+
+    <div class = "container-scrollToTopBtn">
+        <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">Back to Top </button>
+    </div>
+
+    
+
+    <div class = "bottomBar">
+        <p style="color: rgb(219, 219, 219);">&copy; 2024 Victor-Daniel Luca - Blog</p>
+        <div class = "link-container"><a class = "pageLink" href = "https://linktr.ee/daniluca091">MyLinks</a></div>
+    </div>
+
+</div>
+
+</body>
+</html>

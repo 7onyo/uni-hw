@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }}</title>
+    
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'post_detail/post_detail.css'%}">
+
+    <style>
+        @font-face 
+        {
+            font-family: myFont;
+            src: url("{% static 'fonts/poppins/Poppins-Regular.ttf' %}");
+        }
+
+        * 
+        {
+            font-family: myFont;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class = "newSection">
+        <h1 class = "blogPostTitle">{{ post.title }}</h1>
+        <p class = "bottomDate">Posted on {{ post.post_date }}</p>
+        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="postImage">
+        <h1>Post description:</h1>
+        <p class = "imageDescription" >{{ post.paragraph }}</p>
+        <h1>Post details:</h1>
+        <p class = "imageDescription">{{ post.more_details_for_the_dedicated_page }}</p>
+
+        <a href="{% url 'index' %}">Back to Home</a>
+
+    </div>
+    
+</body>
+</html>

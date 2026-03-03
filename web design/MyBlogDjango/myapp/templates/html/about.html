@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'about/about-style.css'%}">
+
+
+    <style>
+        @font-face 
+        {
+            font-family: myFont;
+            src: url("{% static 'fonts/poppins/Poppins-Regular.ttf' %}");
+        }
+
+        * 
+        {
+            font-family: myFont;
+        }
+    </style>
+
+    <title>Victor-Daniel Luca - About</title>
+    
+</head>
+<body>
+<div class = "page">
+    <div class = "titleBar">
+        <h1 style = "color: rgb(219, 219, 219);"> Welcome to Victor-Daniel Luca - About </h1>
+    </div>
+
+    <div class = "linkBar">
+
+    
+        <div class = "link-container">
+            <a href = "{% url 'index' %}" class = "pageLink">Home</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'about' %}" class = "pageLink">About</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'form' %}" class = "pageLink">Form</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'gallery' %}" class = "pageLink">Gallery</a>
+        </div>
+
+        <div class = "link-container">
+            <a href = "{% url 'chatbot' %}" class = "pageLink">ChatBot</a>
+        </div>
+
+    </div>
+
+
+    <div class = "cv">
+        
+        <div class = "left">
+            <div class = "details">
+                <div>DETAILS</div>
+                <div class = "line"></div>
+                <div>ADDRESS</div>
+                <div style="margin-bottom: 12px;">Timisoara</div>
+                <div>PHONE</div>
+                <div style="margin-bottom: 12px;">+40 -----</div>
+                <div>EMAIL</div>
+                <div style="margin-bottom: 25px;">daniluca091@gmail.com / victor.luca05@e-uvt.ro</div>
+            </div>
+
+            <div class = "links">
+                <div>LINKS</div>
+                <div class = "line"></div>
+                <div class = "link-container" style = "margin-bottom: 25px;"><a class = "pageLink" style = "color: rgb(41, 41, 41)" href = "https://linktr.ee/daniluca091">LinkTree</a></div>
+
+            </div>
+
+            <div class = "skills">
+                <div>SKILLS</div>
+                <div class = "line"></div>
+                <div>C / C++</div>
+                <div>Python</div>
+                <div>HTML</div>
+                <div>CSS</div>
+                <div style = "margin-bottom: 25px;">SQL</div>
+            </div>
+
+            <div class = "languages">
+                <div>LANGUAGES</div>
+                <div class = "line"></div>
+            
+                <div class = "langTable">
+                    <div class = "cell">
+                        Language
+                    </div>
+
+                        
+                    <div class = "cell">
+                        Listening
+                    </div>
+
+                        
+                    <div class = "cell">
+                        Reading
+                    </div>
+
+
+                    <div class = "cell">
+                        Speaking
+                    </div>
+
+
+                    <div class = "cell">
+                        Writing
+                    </div>
+
+
+                    <div class = "cell">
+                        Romanian
+                    </div>
+
+
+                    <div class = "cell">
+                        native
+                    </div>
+
+
+                    <div class = "cell">
+                        native
+                    </div>
+
+
+                    <div class = "cell">
+                        native
+                    </div>
+
+
+                    <div class = "cell">
+                        native
+                    </div>
+
+
+                    <div class = "cell">
+                        English
+                    </div>
+
+
+                    <div class = "cell">
+                        C1
+                    </div>
+
+
+                    <div class = "cell">
+                        C1
+                    </div>
+
+
+                    <div class = "cell">
+                        C1
+                    </div>
+
+
+                    <div class = "cell">
+                        C1
+                    </div>
+
+                    <div class = "cell">
+                        French
+                    </div>
+
+
+                    <div class = "cell">
+                        B2
+                    </div>
+
+
+                    <div class = "cell">
+                        B2
+                    </div>
+
+
+                    <div class = "cell">
+                        B2
+                    </div>
+
+
+                    <div class = "cell">
+                        B2
+                    </div>
+                </div>
+            </div>
+
+            <div class = "hobbies">
+                <div>HOBBIES</div>
+                <div class = "line"></div>
+                <div>
+                    Cycling, Skiing, Listening to
+                    music, Video editing
+                </div>
+            </div>
+
+            
+
+        </div>
+
+        <div class = "right">
+            <div class = "profile">
+                <div>PROFILE</div>
+                <div class = "line"></div>
+                <div style = "margin-bottom: 25px;">
+                    Hi, I'm Dani, a passionate learner with a strong interest in programming. While I
+                    don’t consider myself to be a standout, my key strengths lie in adaptability and
+                    rapid learning. I enjoy tackling new challenges that push me to acquire skills quickly
+                    and efficiently. The combination of challenge and purpose drives me, and the
+                    satisfaction of achieving something through my own efforts is what motivates me
+                    most. Without a clear challenge or goal, however, I find it difficult to stay motivated.
+                </div>               
+            </div>
+
+            <div class = education>
+                <div>EDUCATION</div>
+                <div class = "line"></div>
+                <div>
+                    Bachelor's degree, West University of Timișoara
+                </div>
+                <div style = "margin-bottom: 25px;">
+                    High School Diploma, "Petru Rareș" National College Beclean
+                </div>
+            </div>
+
+            <div class = "certifications">
+                <div>LICENSES & CERTIFICATIONS</div>
+                <div class = "line"></div>
+                <div>
+                    C1 Advanced - English Certificate, Cambridge
+                    University Press & Assessment
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div>
+    
+
+
+    <div class = "bottomBar">
+        <p style="color: rgb(219, 219, 219);">&copy; 2024 Victor-Daniel Luca - Blog</p>
+        <div class = "link-container"><a class = "pageLink" href = "https://linktr.ee/daniluca091">MyLinks</a></div>
+    </div>
+
+
+
+</div>
+</body>
+</html>

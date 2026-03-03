@@ -1,0 +1,37 @@
+.container-scrollToTopBtn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scrollToTopBtn
+{
+    color: rgb(219, 219, 219);
+    background-color: rgb(80, 80, 80);
+    border-radius: 7px;
+    border-style: solid;
+    
+    height: 6vh;
+    width: 15%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+
+#scrollToTopBtn:hover
+{
+    cursor: pointer;
+    color: rgb(219, 219, 219);
+    background-color: rgb(100, 100, 100);
+}
+
+#scrollToTopBtn:active
+{
+    color: rgb(219, 219, 219);
+    background-color: rgb(120, 120, 120);
+}

@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch C++ program",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}\\main.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": true,
+      "preLaunchTask": "Build C++ Project",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb.exe"
+    },
+
+    {
+    "name": "Run without Debugging",
+    "type": "cppvsdbg",
+    "request": "launch",
+    "program": "${fileDirname}\\main.exe",
+    "args": [],
+    "stopAtEntry": false,
+    "cwd": "${fileDirname}",
+    "externalConsole": true
+  },
+
+  {
+  "name": "Run without Debugging (gdb)",
+  "type": "cppdbg",
+  "request": "launch",
+  "program": "${fileDirname}\\main.exe",
+  "args": [],
+  "stopAtEntry": false,
+  "cwd": "${fileDirname}",
+  "externalConsole": true,
+  "MIMode": "gdb"
+}
+
+
+  ]
+}

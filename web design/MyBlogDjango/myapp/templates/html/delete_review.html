@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>Delete Review</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'submit_review/submit_review.css'%}">
+
+    <style>
+        @font-face 
+        {
+            font-family: myFont;
+            src: url("{% static 'fonts/poppins/Poppins-Regular.ttf' %}");
+        }
+
+        * 
+        {
+            font-family: myFont;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Delete Review</h1>
+        <p>Are you sure you want to delete the review by {{review.email }}?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Delete</button>
+        </form>
+        <a href="{% url 'index' %}">Cancel</a>
+    </div>
+    
+</body>
+</html>

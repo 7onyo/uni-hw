@@ -1,0 +1,169 @@
+/* Styles for large screens */
+@media screen and (min-width: 1024px) 
+{
+    .page
+    {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* Styles for medium screens */
+@media screen and (max-width: 768px) 
+{
+    .page
+    {
+        width: 95%;
+        padding: 0 20px;
+    }
+}
+/* Styles for small screens */
+@media screen and (max-width: 480px) 
+{
+    .page
+    {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.7);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+html, body 
+{
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    background-color: rgb(45, 45, 45); 
+}
+
+.page
+{
+    animation: zoomIn 0.25s ease-out;
+}
+
+.titleBar
+{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+    background-color: rgb(45, 45, 45);
+}
+.linkBar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    padding-left: 50px;
+    padding-right: 50px;
+
+
+    background-color: rgb(45, 45, 45);
+    
+}
+
+.pageLink
+{
+    text-decoration: none;
+    color: rgb(219, 219, 219);
+}
+
+.link-container 
+{
+    transition: transform 0.3s ease; 
+}
+
+
+.link-container:hover 
+{
+    transform: scale(1.1); 
+}
+
+.bottomBar
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    background-color: rgb(45, 45, 45);
+    color: rgb(219, 219, 219);
+
+    /* position: absolute;
+    bottom: 0; */
+    
+}
+
+
+.cv
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+    
+}
+
+.left
+{
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.right
+{
+    background-color: #ffffff;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+.line
+{
+    background-color: rgb(41, 41, 41);
+    height: 2px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+.langTable
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    
+    border: solid;
+    
+    border-width: 1px;
+
+    margin-bottom: 25px; 
+}
+
+.cell
+{
+    padding: 5px 5px 5px 5px;
+    border: solid;
+    border-width: 1px;
+}
