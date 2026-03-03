@@ -36,22 +36,22 @@ The web app includes:
 ## Screenshots
 
 ### Home Page
-![Home Page](images/home_screen.png)
+![Home Page](images/Home_Screen.png)
 
 ### About Page
-![About Page](images/about_page.png)
+![About Page](images/About_Page.png)
 
 ### Form
-![Form](images/form.png)
+![Form](images/Form.png)
 
 ### Gallery Slider
-![Gallery Page](images/gallery.png)
+![Gallery Page](images/Gallery.png)
 
 ### Chatbot
-![Chatbot](images/chatbot.png)
+![Chatbot](images/Chatbot.png)
 
 ### Admin Panel
-![Admin Panel](images/admin_page.png)
+![Admin Panel](images/Admin_Page.png)
 
 ---
 
